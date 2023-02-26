@@ -17,11 +17,23 @@ server:
 spring:
   application:
     name: ecommerce-config-server
+  rabbitmp:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
   cloud:
     config:
       server:
         git:
 #          uri: file:///Users/kigibiin/Documents/00_workspace/95_MSA/git-local-repo
           uri: https://github.com/aquabello/msa-config-repo.git
-          username: "aquabello@gmail.com"
-          password: "!Rhalswns12"
+#          username: "aquabello@gmail.com"
+#          password: "!Rhalswns12"
+
+# actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh
