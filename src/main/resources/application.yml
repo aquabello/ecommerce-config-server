@@ -1,6 +1,19 @@
 server:
   port: 8888
 
+# native
+#spring:
+#  application:
+#    name: ecommerce-config-server
+#  profiles:
+#    active: native
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: file://${user.home}/Users/kigibiin/Documents/00_workspace/95_MSA/git-local-repo # native
+
+# git
 spring:
   application:
     name: ecommerce-config-server
@@ -8,4 +21,7 @@ spring:
     config:
       server:
         git:
-          uri: file:///Users/kigibiin/Documents/00_workspace/95_MSA/git-local-repo
+#          uri: file:///Users/kigibiin/Documents/00_workspace/95_MSA/git-local-repo
+          uri: https://github.com/aquabello/msa-config-repo.git
+          username: "aquabello@gmail.com"
+          password: "!Rhalswns12"
